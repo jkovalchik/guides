@@ -10,7 +10,10 @@
 - Enable project in Cirkuit:
     - Add project entry in ./resources/namespaces/cirkit/apps/cirkit/cirkit-config.yaml
     - Restart cirkit
-- Create the project in the docker-images repo and build the **project**-builder docker image
+- Create the project in the docker-images repo and build the **project**-builder docker image using the following command in the directory of the image you are building:
+    ```
+    make publish
+    ```
 - Add a **.drone.yml** file to the root of the project's repo (on the develop branch)
 - Make sure that AverittCI is a collaborator for the github repo
 - Activate the project in drone
