@@ -1,5 +1,5 @@
 # Auto deploy
-> How to get branches to be built for QA automatically when a story is moved to QA
+> How to get branches to be built automatically when a story is moved to QA
 - Create namespace in Rancher
 - In the dev-kube repo:
     - Create ./resources/namespaces/**project**/qa-resources-config.yaml
