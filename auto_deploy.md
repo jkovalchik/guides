@@ -5,7 +5,7 @@
     - Create ./resources/namespaces/**project**/qa-resources-config.yaml
     - Create sealed secret:
     ```
-    kubectl -n project create secret generic project-secret --from-literal=datasource_password=meowhow9 -o yaml --dry-run | kubeseal > project.sealed-secret.json && ../../../json-to-yaml.exe
+    kubectl -n project create secret generic project-secret --from-literal=datasource_password=<password> -o yaml --dry-run | kubeseal > project.sealed-secret.json && ../../../json-to-yaml.exe
     ```
     - Merge these changes all the way down to master (after CR to develop)
 - Enable project in Cirkuit:
