@@ -19,3 +19,5 @@
 - Make sure that AverittCI is a collaborator for the github repo
 - Add a **.drone.yml** file to the root of the project's repo (on the develop branch)
 - Activate the project in drone
+## Troubleshooting
+- Make sure the story is of type **Improvement** (otherwise it will just stop after the git clone in drone)
