@@ -3,13 +3,12 @@
 - Create namespace in Rancher
 - In the dev-kube repo:
     - Create ./resources/namespaces/**\<project\>**/qa-resources-config.yaml
-    - Create sealed secret:
+    - Add project to ./resources/namespaces/cirkit/apps/cirkit/cirkit-config.yaml
+    - Create sealed secret (see custom [script](https://github.com/jkovalchik/scripts/blob/master/devspace/create-secret.bat)):
     ```
     kubectl -n <namespace> create secret generic <project> --from-literal=datasource_password=<password> -o yaml --dry-run | kubeseal > resources/namespaces/<project>/<project>.sealed-secret.json && json-to-yaml.exe
     ```
     - Merge these changes all the way down to master (after CR to develop)
-- Enable project in Cirkuit:
-    - Add project entry in ./resources/namespaces/cirkit/apps/cirkit/cirkit-config.yaml
     - Restart cirkit
 - Create the project in the docker-images repo and merge it down to develop (after CR)
 - Build the **project**-builder image using the following command in the directory of the project you are building:
