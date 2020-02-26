@@ -11,7 +11,7 @@
     - Merge these changes all the way down to master (after CR to develop)
     - Restart cirkit
 - Create the project in the docker-images repo and merge it down to develop (after CR)
-- Build the **project**-builder image using the following command in the directory of the project you are building:
+- Build the **\<project\>**-builder image using the following command in the directory of the project you are building:
     ```
     make publish
     ```
