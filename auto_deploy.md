@@ -2,7 +2,7 @@
 > How to get branches to be built automatically when a story is moved to QA
 - Create namespace in Rancher
 - In the dev-kube repo:
-    - Create ./resources/namespaces/**project**/qa-resources-config.yaml
+    - Create ./resources/namespaces/**\<project\>**/qa-resources-config.yaml
     - Create sealed secret:
     ```
     kubectl -n <namespace> create secret generic <project> --from-literal=datasource_password=<password> -o yaml --dry-run | kubeseal > resources/namespaces/<project>/<project>.sealed-secret.json && json-to-yaml.exe
