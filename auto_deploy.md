@@ -6,7 +6,7 @@
     - Add project to ./resources/namespaces/cirkit/apps/cirkit/cirkit-config.yaml
     - Create sealed secret (see custom [script](https://github.com/jkovalchik/scripts/blob/master/devspace/create-secret.bat)):
     ```
-    kubectl -n <namespace> create secret generic <project> --from-literal=datasource_password=<password> -o yaml --dry-run | kubeseal > resources/namespaces/<project>/<project>.sealed-secret.json && json-to-yaml.exe
+    kubectl -n <namespace> create secret generic <project>-secret --from-literal=datasource_password=<password> -o yaml --dry-run | kubeseal > resources/namespaces/<project>/<project>.sealed-secret.json && json-to-yaml.exe
     ```
     - Merge these changes all the way down to master (after CR to develop)
     - Restart cirkit
