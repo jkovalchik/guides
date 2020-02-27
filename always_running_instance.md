@@ -1,7 +1,7 @@
 # Always running instance setup
 - In the dev-kube repo:
-    - Create ./resources/namespaces/**project**/apps/dev-**project**
-    - Inside the dev-**project** create the following files:
+    - Create ./resources/namespaces/**\<project\>**/apps/dev-**\<project\>**
+    - Inside the dev-**\<project\>** create the following files:
         - deployment.yaml
         - ingress.yaml
         - pvc.yaml
