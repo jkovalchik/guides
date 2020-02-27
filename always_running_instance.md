@@ -6,4 +6,4 @@
         - ingress.yaml
         - pvc.yaml
         - service.yaml
-- Add the **build-dev** step to the project's **.drone.yml** file (use a similar project as a reference)
+- Add the **build-dev** and **patch-dev** steps to the project's **.drone.yml** file (use a similar project as a reference)
